@@ -6,6 +6,8 @@ public class Rec : MonoBehaviour
 
     public TextMeshProUGUI healthText;
 
+    public Image healthBar; // Reference to the UI Text element
+
     public int health = 100;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +33,8 @@ public class Rec : MonoBehaviour
 
             health -= 20; // Example: reduce health by 20
             healthText.text = health.ToString(); // Update Health Text with the current health
+
+            healthBar.fillAmount = health / 100f; // Update Health Bar with the current health
             Debug.Log("Current Health: " + health);
 
             if (health <= 0)
