@@ -29,9 +29,9 @@ public class Rec : MonoBehaviour
             health -= 10; // Example: reduce health by 10
             Debug.Log("Current Health: " + health);
 
-            if (health = 0)
+            if (health <= 0)
             {
-                Debug.Log("Player is dead")
+                Debug.Log("Player is dead");
             }
         }
     }
